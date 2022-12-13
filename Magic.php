@@ -1,7 +1,7 @@
 <?php
 
-$value = -5;
-$stat = "dec";
+$value = 100; // your value here
+$stat = "inc"; /*dec or inc*/
 
 $result = magic_inc($value, $stat);
 echo 'Result for ' . $value . ' is : ' . $result;
@@ -61,8 +61,7 @@ function calculateResult($nbr,$stat){
             }
 
         }
-    }
-    else {
+    } else {
         if ($nbr > -1 && $nbr < 0) {
             $result = $nbr * 10;
             /**Divide to get the real part of nbr number */
@@ -81,7 +80,6 @@ function calculateResult($nbr,$stat){
             }
         }
 
-        /**if nbr is between 1 and 9 */
         if ($nbr > -10 && $nbr <= -1) {
             if (strtolower($stat) == "inc") {
                 return ceil($nbr) + 1;
